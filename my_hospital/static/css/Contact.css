@@ -1,0 +1,78 @@
+.img2{
+    height: 20em;
+    width: 100%;
+    margin-top: -12px;
+    box-shadow: black 1px 1px 5px 1px ;
+
+
+    
+}
+.contact_head1{
+    position: absolute; top: 1em;
+    color: rgb(24, 24, 24);
+    text-align: center;
+    font-size: 5em;
+    text-shadow: 2px 2px 3px white;
+    margin-left: 6.2em;
+    font-weight: bolder;
+    font-style: italic;
+}
+.contact_head1:hover{
+    color: rgba(0, 0, 0, 0.614);
+}
+.c-p{
+    margin-top: -81px;
+    margin-left: 685px;
+}
+.c-p a{
+    color: rgb(244, 247, 246);
+    text-decoration: none;
+    text-shadow: black 1px 1px 3px ;
+
+}
+.div-1{
+    margin-top: 6em;
+    float: left;
+    margin-right: 2em;
+    margin-left: 2.3em;
+    margin-bottom: 1em;
+    width: 25em;
+    height: 11em;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 13px 13px;
+    box-shadow: 1px 1px 2px 3px black;
+}
+.div-1:hover{
+    background-color: rgba(0, 0, 0, 0.812);
+    border-radius: 7px 7px;
+    color: white;
+    top: 20em;
+}
+.c-h1{
+    
+    text-align: center;
+    text-shadow: black 1px 1px 1px  
+     
+}
+
+.c-h5{
+    text-align: center;
+    text-shadow: black 1px 1px 1px 
+}
+
+.div-2{
+    height: 34em;
+    width: 90%;
+    margin-top: 3em;
+    background-color: rgba(103, 190, 198, 0.236);
+    text-align: center;
+    margin-left: 4.7em;
+    margin-bottom: 3em;
+    border-radius: 13px 13px;
+    box-shadow: black 1px 1px 5px 1px ;
+}
+.c-h1-1{
+    font-size: 3.7em;
+
+}

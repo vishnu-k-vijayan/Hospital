@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="contact-us" style="position: relative;">
+<img src="{% static 'image/header-page.jpg' %}" class="img2">
+<h1 class="contact_head1">contact us</h1>
+<p class="c-p"><a href="{% url 'Home'%}">HOME/CONTACT US</a></p>
+
+    <div class="div-block">
+        <div class="div-1" style="margin-left: 3em;">
+            <h1 class="c-h1">Address</h1>
+            <h5 class="c-h5">DocsPuls Medical_Solution <br>123 Street, New York, USA</h5>     
+        </div>
+    
+        <div class="div-1">
+            <h1 class="c-h1">Call Us Now</h1>
+            <h5 class="c-h5">Call : +01 1234567890</h5>
+        </div>
+    
+        <div class="div-1">
+            <h1 class="c-h1">Mail Us Now</h1>
+            <h5 class="c-h5">mail@domain.com</h5>
+        </div>
+    </div>
+<h1 style="color: rgba(177, 203, 195, 0.059);">vishnu kvzn </h1>
+    <div class="div-2">
+        <p style="color: rgba(240, 248, 255, 0);">contact us</p>
+
+        <h1 class="c-h1-1">Have Any Query? Please Contact Us!</h1>
+
+        
+
+        <form class="c-form">
+            <input type="text" style="border-radius: 15px 15px;"   placeholder="your name..."></input>
+            <input type="text" style="border-radius: 15px 15px;"   placeholder="your email.."></input><br><br>
+            <input type="text" style="border-radius: 15px 15px;"   placeholder="phone.."></input>
+            <input type="text" style="border-radius: 15px 15px;"   placeholder="subject"></input><br><br>
+            <input type="textarea" style="border-radius: 15px 15px;" placeholder="discription....."></input><br>
+            <input type="submit" value="Mssage" style="margin-left: -1em;margin-top: 1em;"></input>
+        </form>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

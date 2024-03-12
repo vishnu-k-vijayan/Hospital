@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="d-body">
+<div class="doctors" style="position: relative;">
+    <img src="{% static 'image/banner-d1.jpg' %}" class="img3">
+    <h1 class="dr-h1">Our Doctors</h1>
+    <p class="d-p"><a href="{% url 'Home'%}">HOME/DOCTOR</a></p>
+
+
+<p class="dr-p">Doctors are one of the most important people in our society. They are lifesavers. They 
+    are the first ones to lend a helping hand when someone is struggling. Many parents 
+    dream that their children might become doctors in the future. Doctors are the ones 
+    who have a lot of knowledge about all diseases. This article has sample paragraphs 
+    about doctors and their importance in society. Check them out before you write a 
+    paragraph about doctors.
+</p>
+
+<!-- <div class="img4" style="background-image:url('{% static 'image/doctors-d.jpg' %}') ;"></div> -->
+
+</div>
+
+{% for i in Doctor_list %}
+
+  <div class="div-d">
+    <img class="img5" src="{{i.image.url}}">
+    <div class="div-d1">
+        <h1 class="dr2-h1">Dr.{{i.name}}</h1>
+        <h2 class="dr-h2">Dep:{{i.department}}</h2>
+        <h3 class="dr-h3">Qualification:{{i.qualification}}</h3>
+        <h3 style="margin-left: 160px;margin-right: 5em;" class="dr-h3">Description : {{i.discription}}</h3>
+        <h3 class="dr-h3">Mobile:{{i.ph_no}}</h3>
+    </div>    
+  </div>
+  
+
+{% endfor %}
+
+
+<h1 style="margin-top: 5em;margin-bottom: 2em;color: rgba(241, 241, 241, 0);">vishnu kvzn</h1>
+</div>
+{% endblock %}

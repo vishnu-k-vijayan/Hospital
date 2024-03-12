@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 class="d-h1" style="text-align: center;font-size: 4em;font-style:italic;"> Our Departments</h1>
+<p style="font-size: 1.5em;text-align: center;margin-left: 0em;">Hospital is an integration of several departments such as Cardiolegic departments,
+     Gynaecolegic departments, Orthopaedic departments,<br>
+      psychiartics departments and Anasthesiological departments. Each department has different 
+     purposes and requirements in a hospital</p><br><br>
+
+{% for i in Department_list %}
+
+<h2 style="font-size: 2em;margin-left: 1em;text-decoration: underline;">{{i.d_name}}</h2>
+<p style="font-size: 1.5em;text-align: left;margin-left: 1.9em;">{{i.discription}}</p>
+<img class="dpt_img" src="{{i.image.url}}" style="border-radius: 15px 15px;height: 28em; width: 65em;margin-left: 9em;">
+<br><br>
+
+{% endfor %}
+
+
+{% endblock %} 

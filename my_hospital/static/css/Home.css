@@ -1,0 +1,20 @@
+
+.img1{
+    height: 41em;
+    width:100%;
+    float: right;
+    background-size: cover;
+    margin-top: -1em;
+    position: relative;
+    /* background-attachment: fixed; */
+}
+.home_head1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 5em;
+    text-shadow: 2px 2px 3px white;
+    margin-left: 65px;
+    font-weight: bolder;
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+}

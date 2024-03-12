@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="home_background" style="position: relative;">
+    <img src="{% static 'image/doctor-ddd.jpg' %}" class="img1">
+    <h1 class="home_head1" style="position: absolute; top: 10px; left: 20px;">Health Care Services 
+        <br>We Care About Your Health </h1>
+</div>
+
+<h2 style="color: rgba(240, 248, 255, 0);">kvzn</h2><br><br><br>
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- Department -->
+<h1 class="d-h1" style="text-align: center;font-size: 4em;font-style:italic;"> Our Departments</h1>
+<p style="font-size: 1.5em;text-align: center;margin-left: 0em;">Hospital is an integration of several departments such as Cardiolegic departments,
+     Gynaecolegic departments, Orthopaedic departments,<br>
+      psychiartics departments and Anasthesiological departments. Each department has different 
+     purposes and requirements in a hospital</p><br><br>
+<div class="img4" style="background-image:url('{% static 'image/hsptl_Exterior-.webp' %}') ;">
+    <a href="{% url 'Department'%}"> <input type="submit" value="VIEW OUR DEPARTMENT" style="margin-top: 
+    18em;width: 18em;margin-left: 19em;"></input></a>
+</div>
+{% for i in Department_list %}
+
+<h2 style="font-size: 2em;margin-left: 1em;text-decoration: underline;">{{i.d_name}}</h2>
+<p style="font-size: 1.5em;text-align: left;margin-left: 1.9em;">{{i.discription}}</p>
+<img class="dpt_img" src="{{i.image.url}}" style="border-radius: 15px 15px;height: 28em; width: 65em;margin-left: 9em;">
+<br><br>
+
+{% endfor %}
+<br>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- Doctor -->
+
+<div class="d-body">
+    <div class="doctors" style="position: relative;">
+        <img src="{% static 'image/banner-d1.jpg' %}" class="img3">
+        <h1 class="dr-h1">Our Doctors</h1>
+        <p class="d-p"><a href="{% url 'Home'%}">HOME/DOCTOR</a></p>
+    
+    
+    <p class="dr-p">Doctors are one of the most important people in our society. They are lifesavers. They 
+        are the first ones to lend a helping hand when someone is struggling. Many parents 
+        dream that their children might become doctors in the future. Doctors are the ones 
+        who have a lot of knowledge about all diseases. This article has sample paragraphs 
+        about doctors and their importance in society. Check them out before you write a 
+        paragraph about doctors.
+    </p>
+    
+    <div class="img4" style="background-image:url('{% static 'image/doctors-d.jpg' %}') ;">
+        <a href="{% url 'Doctor'%}"> <input type="submit" value="VIEW OUR DOCTORS"
+         style="margin-top: 18em;width: 18em;margin-left: 19em;"></input></a>
+    </div>
+    
+    </div>
+    
+    {% for i in Doctor_list %}
+    
+      <div class="div-d">
+        <img class="img5" src="{{i.image.url}}">
+        <div class="div-d1">
+            <h1 class="dr2-h1">Dr.{{i.name}}</h1>
+            <h2 class="dr-h2">Dep:{{i.department}}</h2>
+            <h3 class="dr-h3">Qualification:{{i.qualification}}</h3>
+            <h3 style="margin-left: 160px;margin-right: 5em;" class="dr-h3">Description : {{i.discription}}</h3>
+            <h3 class="dr-h3">Mobile:{{i.ph_no}}</h3>
+        </div>    
+      </div>
+      
+    
+    {% endfor %}
+<br><br><br><br><br>
+ 
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <!-- Booking -->
+
+    <h1 class="h-booking">Book  An  Apointment</h1>
+<div class="booking1"  style="background-image: url('{% static 'image/adult.jpg' %}');background-size:cover;">
+    <!-- <img src="{% static 'image/adult.jpg' %}"> -->
+    <form class="booking">
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Phone"><br><br>
+        <input type="text" placeholder="Your E-Mail">
+        <input type="text" placeholder="Your Address"><br><br>
+
+        <select class="textbox1" name="department" id="department">
+            <option value="disabled">Select your Department</option>  
+            <option value="cardiology">Cardiology</option>
+            <option value="Gynaecologist">Gynaecologist</option>
+            <option value="Orthopaedic">Orthopaedic</option>
+            <option value="Psychiartist">Psychiartist</option>
+            <option value="Anesthesiology">Anesthesiology</option>
+          </select>
+  
+          <select class="textbox1" name="doctor" id="doctor">
+            <option value="disabled">Select your Doctor</option>  
+            <option value="dr-john">Dr. John</option>
+            <option value="dr-mary">Dr. Mary</option>
+            <option value="dr-lee">Dr. Lee</option>
+            <option value="dr-khan">Dr. Khan</option>
+            <option value="dr-patel">Dr. Patel</option>
+          </select><br><br>
+
+        <input type="date" placeholder="Date">
+        <input type="time" placeholder="time"><br><br>
+        <input type="textarea" placeholder="Your Message"><br><br>
+        <input type="submit" value="Book Now">
+      </form>   
+</div>
+<br><br><br><br><br>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- about -->
+
+<div class="about">
+    <!-- <img class="img_about" src="{% static 'image/aboutbg.webp' %}" > -->
+    <h1 class="about_us">About Us</h1>
+</div>
+
+<div class="about3" >
+    <h2 class="about2">Over View</h2>
+ 
+           <p class="content">Founded in 1997 by a team of India’s leading cardiologists, 
+            CARE Hospitals started its journey as a 100-bedded Heart <br>
+            Institute with a core team of 20 cardiologists, 1 operating theatre, and 1 catheterization laboratory. 25 years later, the CARE <br>
+            Hospitals Group is a multi-speciality healthcare provider with 17 healthcare facilities serving 7 cities across 6 states in India. <br>
+            It is the regional leader in South and Central India and is amongst the top 5 Pan-Indian hospital chains. CARE Hospitals <br>
+            delivers comprehensive care in over 30 specialities. Adopting a service-oriented delivery model, CARE Hospitals provides <br>
+            cost-effective medical care, with an uncompromising commitment to its core purpose – ‘To make quality healthcare <br>
+            accessible at affordable costs to all’ 
+        </p> 
+
+    <img class="img_about1" src="{% static 'image/hospital.webp' %}" >
+    
+    <h3 class="about2">Our Vision, Mission and Values</h2>
+    <p class="content">    Vision: To be a trusted, people-centric integrated healthcare system as a model for global healthcare. <br>
+        Mission: To provide the best and cost-effective care, accessible to every patient through integrated clinical practice, <br>
+        education and research.Values: <br>
+
+    <ul class="content">
+        <li><b>Transparency:</b> Being transparent requires courage and we stand for transparency. Every aspect of our business is clear <br> 
+            and comprehensive to the relevant stakeholder and we never compromise on the fundamentals at any cost.</li>
+        <li> <b>Teamwork:</b> A collaborative work ecosystem is where all the collective efficiencies are harnessed and propelled towards<br>
+            delivering the best possible care.</li>
+        <li><b>Empathy & Compassion:</b> The ability to understand and respond to the feelings of both the patients and the employees, <br>
+            so that all the services are rendered in a supportive work environment with a humane touch.</li>
+        <li><b>Excellence:</b>Excellence: When every action aims at enhancing quality, the outcome is always excellence. Each member in our team <br>
+            strives with the same intensity in every action, be it healthcare or any other dimension of the organisational processes.</li>
+        <li><b>Education:</b> Learning continuously to create an advanced and sustainable healthcare system that results in collective <br>
+            growth of both the employees and the organization.</li>
+        <li><b>Equity:</b> Mutual trust based on fair and impartial consideration of all professional matters, so that it can foster positive <br>
+            contribution towards the institutional purpose.</li>
+        <li><b>Mutual trust & respect:</b> We do not discriminate against anyone on any grounds. Respect is a traditional trait in us and we <br>
+            respect everyone, for we believe that trust grows respect, which forms the foundation of real success.</li>           
+    </ul>
+    </p>
+    <!-- <div class="about3">
+        <img src="{% static 'image/Screenshot.jpg' %}"  style="height: 27em; margin-left: 13em; margin-top: 4em;">
+        <img src="{% static 'image/scrn.jpg.jpg' %}"  style="height: 11em;width: 15em; margin-left: 13em;margin-top: -20em;">
+    </div> -->
+<!-- <button class="btn" ><a href="doctor.html"></a>Doctors</button> -->
+
+</div>
+
+<div class="img4" style="background-image:url('{% static 'image/doctor-d2.jpg' %}') ;"></div>
+<br>
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- Contact us -->
+
+<div class="contact-us" style="position: relative;">
+    <img src="{% static 'image/header-page.jpg' %}" class="img2">
+    <h1 class="contact_head1">contact us</h1>
+    <p class="c-p"><a href="{% url 'Home'%}">HOME/CONTACT US</a></p>
+    
+        <div class="div-block">
+            <div class="div-1" style="margin-left: 3em;">
+                <h1 class="c-h1">Address</h1>
+                <h5 class="c-h5">DocsPuls Medical_Solution <br>123 Street, New York, USA</h5>     
+            </div>
+        
+            <div class="div-1">
+                <h1 class="c-h1">Call Us Now</h1>
+                <h5 class="c-h5">Call : +01 1234567890</h5>
+            </div>
+        
+            <div class="div-1">
+                <h1 class="c-h1">Mail Us Now</h1>
+                <h5 class="c-h5">mail@domain.com</h5>
+            </div>
+        </div>
+    <h1 style="color: rgba(177, 203, 195, 0.059);">vishnu kvzn </h1>
+        <div class="div-2">
+            <p style="color: rgba(240, 248, 255, 0);">contact us</p>
+    
+            <h1 class="c-h1-1">Have Any Query? Please Contact Us!</h1>
+    
+            
+    
+            <form class="c-form">
+                <input type="text" style="border-radius: 15px 15px;"   placeholder="your name..."></input>
+                <input type="text" style="border-radius: 15px 15px;"   placeholder="your email.."></input><br><br>
+                <input type="text" style="border-radius: 15px 15px;"   placeholder="phone.."></input>
+                <input type="text" style="border-radius: 15px 15px;"   placeholder="subject"></input><br><br>
+                <input type="textarea" style="border-radius: 15px 15px;" placeholder="discription....."></input><br>
+                <input type="submit" value="Mssage" style="margin-left: -1em;margin-top: 1em;"></input>
+            </form>
+        </div>
+    
+    </div>
+
+{% endblock %}

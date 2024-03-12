@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="h-booking">Book  An  Apointment</h1>
+<div class="booking1"  style="background-image: url('{% static 'image/adult.jpg' %}');background-size:cover;">
+    <!-- <img src="{% static 'image/adult.jpg' %}"> -->
+    <form class="booking">
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Phone"><br><br>
+        <input type="text" placeholder="Your E-Mail">
+        <input type="text" placeholder="Your Address"><br><br>
+
+        <select class="textbox1" name="department" id="department">
+            <option value="disabled">Select your Department</option>  
+            <option value="cardiology">Cardiology</option>
+            <option value="Gynaecologist">Gynaecologist</option>
+            <option value="Orthopaedic">Orthopaedic</option>
+            <option value="Psychiartist">Psychiartist</option>
+            <option value="Anesthesiology">Anesthesiology</option>
+          </select>
+  
+          <select class="textbox1" name="doctor" id="doctor">
+            <option value="disabled">Select your Doctor</option>  
+            <option value="dr-john">Dr. Vishnu</option>
+            <option value="dr-mary">Dr. Vimal</option>
+            <option value="dr-mary">Dr. Sera kuriyan</option>
+            <option value="dr-lee">Dr. Antriya philip</option>
+            <option value="dr-khan">Dr. Godwin</option>
+            <option value="dr-patel">Dr. Basil</option>
+          </select><br><br>
+
+        <input type="date" placeholder="Date">
+        <input type="time" placeholder="time"><br><br>
+        <input type="textarea" placeholder="Your Message"><br><br>
+        <input type="submit" value="Book Now">
+      </form>   
+</div>
+
+
+
+{% endblock %}

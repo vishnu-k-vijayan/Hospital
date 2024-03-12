@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <link rel="stylesheet" href="{% static 'css/Base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+        <link rel="stylesheet" href="{% static 'css/About.css' %}">
+        <link rel="stylesheet" href="{% static 'css/Booking.css' %}">
+        <link rel="stylesheet" href="{% static 'css/Contact.css' %}">
+        <link rel="stylesheet" href="{% static 'css/Doctor.css' %}">
+    </head>
+    <body>
+        <div class="nav">
+            <ul class="ul_nav"><br>
+                <i class="fa fa-hospital-o" style="font-size:48px;color: #f7f7f7;"></i>
+                <b style="color: #f7f7f7;margin-left: 3%;text-shadow: black 2px 2px 3px;font-size: 50px;">Doc <b style="color: rgb(159, 234, 89);margin-left: -10px;text-shadow: black 2px 2px 3px;margin-right: -11px;"><u>P</u></b> ulse</b><br>
+                <i style="color: #f7f7f7;margin-left: 3%;font-size: 20px;margin-left: 5em;text-shadow: black 2px 2px 3px;">Medical_Solution</i>
+                <li class="li_nav"><a href="#"><i class="fa fa-search" style=" font-size:24px;margin-top: -2px;"></i></li></a>
+                <li class="li_nav"><a href="{% url 'Contact'%}">Contact Us</a></li>
+                <li class="li_nav"><a href="{% url 'About'%}">About Us</a></li>
+                <li class="li_nav"><a href="{% url 'Booking'%}">Booking</a></li>
+                <li class="li_nav"><a href="{% url 'Doctor'%}">Doctors</a></li>
+                <li class="li_nav"><a href="{% url 'Department'%}">Department</a></li>
+                <li class="li_nav"><a href='{% url "Home"%}'>Home</a></li>
+                
+            </ul>
+        </div>
+<!-- -------------------------------------------------------------------------------------------> 
+
+        {% block content %} 
+        
+        {% endblock %} 
+
+<!-- ------------------------------------------------------------------------------------------->
+
+        <div class="box2"><h3 class="head">About</h3>
+            <p class="para">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut <br> enim ad minim veniam, quis nostrud exercitation u
+            </p>
+        </div>
+        
+        <div class="box2"><h3 class="head">Hospital Location</h3>
+            <ul class="about1">
+                <p class="para1">  DocPuls Hospitals has been a pioneer <br>
+                     in bringing worldclass healthcare to <br>
+                     the doorsteps of every Indian.</p>
+            </ul>
+        </div>
+        
+        
+        <div class="box2"><h3 class="head">Open Hours</h3>
+            <p class="para">
+                monaday-friday ... 8:30-9:30<br><br>
+                saturday-sunday ... 9:30-7:30 <br>
+               
+            </p> 
+        </div>
+            
+        <div class="box2"><h3 class="head" >Contact Us</h3>
+            <p class="para">Address : DocsPuls Medical_Solution <br>
+                  Call : +01 1234567890 <br>
+                  Email : mail@domain.com
+            </p>
+        </div>
+        
+        
+        <p style="text-align: center;color: rgb(194, 184, 184);margin-top: 1em;">2024 All Rights Reserved.  Design By Vshnu kvzN </p>
+        
+        
+    </body>
+</html>
